@@ -1,0 +1,36 @@
+[
+  {
+    "mode": "virtualfit",
+    "cpuThrottle": 4,
+    "idleWindowMs": 2000,
+    "idle": {
+      "appRafCallbacks": 0,
+      "runningAnimations": 0,
+      "taskMs": 7.14,
+      "layoutMs": 0.0,
+      "styleMs": 0.0
+    },
+    "navigation": {
+      "settledMs": 824.57,
+      "appRafCallbacks": 24,
+      "taskMs": 366.63
+    }
+  },
+  {
+    "mode": "runway",
+    "cpuThrottle": 4,
+    "idleWindowMs": 2000,
+    "idle": {
+      "appRafCallbacks": 0,
+      "runningAnimations": 0,
+      "taskMs": 7.91,
+      "layoutMs": 0.0,
+      "styleMs": 0.0
+    },
+    "navigation": {
+      "settledMs": 557.9,
+      "appRafCallbacks": 39,
+      "taskMs": 401.57
+    }
+  }
+]

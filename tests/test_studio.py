@@ -35,6 +35,8 @@ try:
      f.locator('[data-rw-auto]').click();expect(f.locator('[data-rw-auto]')).to_have_attribute('aria-pressed','true')
      expect(f.locator('[data-rw-panel]:not([hidden])')).not_to_have_attribute('data-rw-panel',playing_from,timeout=9000)
      f.locator('[data-rw-auto]').click();expect(f.locator('[data-rw-auto]')).to_have_attribute('aria-pressed','false')
+     f.locator('[data-rw-hero].is-on [data-rw-zoom]').click();expect(f.locator('[data-rw-lb]')).to_have_attribute('aria-hidden','false')
+     f.locator('[data-rw-lb] [data-rw-pin="2"]').click();f.locator('[data-rw-zoom-close]').click();expect(f.locator('[data-rw-lb]')).to_have_attribute('aria-hidden','true')
      panel=f.locator('[data-rw-panel]:not([hidden])');bundle=panel.locator('[data-product-id]').evaluate_all('(els)=>[...new Set(els.map(e=>e.dataset.productId))]');panel.locator('[data-rw-all]').click();f.wait_for_function('(ids)=>ids.every(id=>NemuCatalog.bag().includes(id))',arg=bundle)
     f.evaluate('NemuCatalog.bag().forEach(id=>NemuCatalog.remove(id))')
     ids=f.evaluate('NemuCatalog.rows.slice(0,2).map(p=>p.id)');f.evaluate('(ids)=>{NemuCatalog.add(ids);NemuCatalog.add(ids)}',ids);expect(p.locator('#pf-bag .cart-count')).to_have_text('2');assert f.evaluate('NemuCatalog.bag().length')==2

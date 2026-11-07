@@ -540,6 +540,9 @@
 @media(max-width:749px){.site-header{height:64px;padding:0 16px;gap:12px}.site-header .brand{font-size:24px}.site-header .brand span{display:none}.site-header nav{display:block;font-size:10px}.site-header #open-bag{font-size:12px}.rw__sub{font-size:10px;line-height:1.4;max-width:330px}.rw__head{padding-top:12px}.rw__info .nemu-meta{font-size:9px}.rw__bundle-note{font-size:9px}}
 /* Mobile keeps the spatial layout without expensive moving blur layers. */
 @media(max-width:749px){
+ runway-section .rw__spot,runway-section .rw__pin-dot::before,runway-section .rw__pin-dot::after{animation:none!important}
+ runway-section .rw__look-panel.is-in .rw__item,runway-section .rw__look-panel.is-in .rw__mhead,runway-section .rw__look-panel.is-in .rw__bundle .rw__cta{animation:none!important}
+ runway-section .rw__morph{transition:none!important;transform:none!important}
  runway-section .rw__sub{display:block;font-size:12px;line-height:1.5;letter-spacing:normal;max-width:34ch}
  runway-section .rw__controls{display:flex;gap:6px;padding:4px 12px 12px;opacity:1!important}
  runway-section .rw__controls .rw__icon{width:44px;height:44px;min-width:44px;flex:0 0 44px}
@@ -1172,6 +1175,11 @@ window.addEventListener('nemu-bag-change',renderBag);
         const half = (s.w || 200) * sc * 0.5;
         if (x + half < -4 || x - half > this.W + 4) o = 0;
         const st = s.el.style;
+        if (o < 0.01) {
+          if (!s.culled) { st.visibility = 'hidden'; st.opacity = '0'; st.pointerEvents = 'none'; s.culled = true; }
+          return;
+        }
+        s.culled = false;
         st.transform = `translate3d(${x.toFixed(2)}px,${(-bottom).toFixed(2)}px,0) translateX(-50%) scale(${sc.toFixed(4)})`;
         st.opacity = o.toFixed(3);
         st.zIndex = String(z);
@@ -1290,7 +1298,32 @@ window.addEventListener('nemu-bag-change',renderBag);
         this.raf = requestAnimationFrame(this.step);
       }
 
+      stepMobile(t) {
+        if (!this.visible || document.hidden) { this.raf = null; return; }
+        if (!this.mobileTween || this.mobileTween.target !== this.target) {
+          this.mobileTween = { target: this.target, start: t - 16.67 };
+          for (const s of this.sim) {
+            const goal = this.wrapN(s.a - this.target);
+            s.mobileFrom = s.x; s.from = s.x; s.prev = goal;
+            s.trip = Math.abs(goal - s.x) > this.N / 2;
+          }
+        }
+        const u = this.dragging ? 1 : clamp((t - this.mobileTween.start) / 360, 0, 1);
+        const ease = 1 - Math.pow(1 - u, 3);
+        for (const s of this.sim) {
+          const goal = this.wrapN(s.a - this.target);
+          s.x = s.mobileFrom + (goal - s.mobileFrom) * ease;
+          s.g = goal; s.v = 0;
+          if (u === 1) { s.x = goal; s.trip = false; }
+          this.mode === 'classic' ? this.placeClassic(s) : this.placeLine(s);
+        }
+        const moving = u < 1 || this.dragging;
+        if (moving) { this.setStill(false); this.raf = requestAnimationFrame(this.step); }
+        else { this.raf = null; this.setStill(true); }
+      }
+
       step(t) {
+        if (this.mobile && !this.reduce && (this.mode === 'classic' || this.mode === 'line')) return this.stepMobile(t);
         const dt = this.last ? Math.min(0.034, (t - this.last) / 1000) : 1 / 60;
         this.last = t;
         let busy = false;
