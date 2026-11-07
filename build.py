@@ -22,10 +22,13 @@ for p in seed:
     thumb = R / 'thumbs' / (p['id'] + '.webp')
     if thumb.exists():
         p['preview'] = 'thumbs/' + thumb.name
+fashion = [p for p in seed if p['category'] in ['fashion-men', 'fashion-women'] and p['storeCategory'] == 'preloved']
+assert len(fashion) == 181
+(R / 'preloved-fashion.json').write_text(safe_json(fashion))
 html = (R / 'discovery-template.html').read_text().replace('__PRODUCTS__', safe_json(seed)).replace('__CATEGORIES__', safe_json(json.loads((R / 'categories.json').read_text()))).replace('__COUNT__', format(len(products), ',').replace(',', '.'))
-for name in ['experience.css', 'shipping.css', 'preloved.css', 'preloved-mobile.css', 'preloved-fitting.css', 'preloved-catalog-fitting.css']:
+for name in ['experience.css', 'shipping.css', 'preloved.css', 'preloved-mobile.css', 'preloved-studio.css']:
     html = html.replace('<link rel="stylesheet" href="' + name + '">', '<style>' + (R / name).read_text() + '</style>')
-for name in ['experience.js', 'fulfillment.js', 'shipping.js', 'preloved.js', 'preloved-fitting.js']:
+for name in ['experience.js', 'fulfillment.js', 'shipping.js', 'preloved.js', 'preloved-studio.js']:
     html = html.replace('<script src="' + name + '"></script>', '<script>' + (R / name).read_text() + '</script>')
 (R / 'index.html').write_text(html)
 print(json.dumps({'catalogProducts': len(products), 'bootstrapProducts': len(seed), 'htmlBytes': len(html.encode()), 'gzipBytes': len(gzip.compress(html.encode()))}))
