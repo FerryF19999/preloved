@@ -28,6 +28,11 @@ try:
       p.mouse.move(x,y);p.mouse.down();p.mouse.move(box['x']+box['width']*.2,y,steps=12);p.mouse.up()
      else:f.locator('[data-rw-next]').click()
      expect(f.locator('[data-rw-panel]:not([hidden])')).not_to_have_attribute('data-rw-panel',before)
+     expect(f.locator('[data-rw-next]')).to_be_visible();expect(f.locator('[data-rw-prev]')).to_be_visible()
+     playing_from=f.locator('[data-rw-panel]:not([hidden])').get_attribute('data-rw-panel')
+     f.locator('[data-rw-auto]').click();expect(f.locator('[data-rw-auto]')).to_have_attribute('aria-pressed','true')
+     expect(f.locator('[data-rw-panel]:not([hidden])')).not_to_have_attribute('data-rw-panel',playing_from,timeout=9000)
+     f.locator('[data-rw-auto]').click();expect(f.locator('[data-rw-auto]')).to_have_attribute('aria-pressed','false')
      panel=f.locator('[data-rw-panel]:not([hidden])');bundle=panel.locator('[data-product-id]').evaluate_all('(els)=>[...new Set(els.map(e=>e.dataset.productId))]');panel.locator('[data-rw-all]').click();f.wait_for_function('(ids)=>ids.every(id=>NemuCatalog.bag().includes(id))',arg=bundle)
     f.evaluate('NemuCatalog.bag().forEach(id=>NemuCatalog.remove(id))')
     ids=f.evaluate('NemuCatalog.rows.slice(0,2).map(p=>p.id)');f.evaluate('(ids)=>{NemuCatalog.add(ids);NemuCatalog.add(ids)}',ids);expect(p.locator('#pf-bag .cart-count')).to_have_text('2');assert f.evaluate('NemuCatalog.bag().length')==2

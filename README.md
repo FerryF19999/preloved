@@ -13,7 +13,7 @@ python3 -m http.server 4188 --bind 127.0.0.1
 
 Open `http://127.0.0.1:4188/#preloved`.
 
-`index.html` and required assets are committed, so any static host can serve the repository without a build step. Enable gzip/Brotli at the host. Deployment/Pages configuration is not included.
+`index.html` and required assets are committed, so any static host can serve the repository without a build step. Enable gzip/Brotli at the host. Live preview: https://ferryf19999.github.io/preloved/#preloved (GitHub Pages, main branch). The temporary SSH tunnel is not the supported preview; its bandwidth caused incomplete page loads.
 
 ## Catalogue-backed experiences
 
@@ -40,7 +40,7 @@ python3 -m venv .venv
 . .venv/bin/activate
 pip install -r requirements-dev.txt
 playwright install chromium
-# Keep the static server running in another terminal.
+# The test starts its own temporary static server.
 python tests/test_studio.py
 ```
 
