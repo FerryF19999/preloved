@@ -30,5 +30,7 @@ for name in ['experience.css', 'shipping.css', 'preloved.css', 'preloved-mobile.
     html = html.replace('<link rel="stylesheet" href="' + name + '">', '<style>' + (R / name).read_text() + '</style>')
 for name in ['experience.js', 'fulfillment.js', 'shipping.js', 'preloved.js', 'preloved-studio.js']:
     html = html.replace('<script src="' + name + '"></script>', '<script>' + (R / name).read_text() + '</script>')
+# The public entry exposes only the two visual studios; catalog stays a data source.
+html = (R / 'studio-template.html').read_text()
 (R / 'index.html').write_text(html)
 print(json.dumps({'catalogProducts': len(products), 'bootstrapProducts': len(seed), 'htmlBytes': len(html.encode()), 'gzipBytes': len(gzip.compress(html.encode()))}))
