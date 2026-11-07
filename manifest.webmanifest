@@ -1,0 +1,18 @@
+{
+  "id": "/preloved/",
+  "name": "NEMU Preloved",
+  "short_name": "Preloved",
+  "description": "Discover preloved fashion with NEMU.",
+  "lang": "id",
+  "start_url": "/preloved/",
+  "scope": "/preloved/",
+  "display": "standalone",
+  "background_color": "#f5f0ff",
+  "theme_color": "#753cfa",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
