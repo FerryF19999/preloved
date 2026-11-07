@@ -553,6 +553,35 @@
  runway-section .rw__pin-dot,runway-section .rw__pin::after,runway-section .rw__lb-close{-webkit-backdrop-filter:none;backdrop-filter:none}
  runway-section.is-revealed .rw__stage,runway-section.is-revealed .rw__controls,runway-section.is-revealed .rw__title,runway-section.is-revealed .rw__sub,runway-section.is-revealed .rw__panel{transition-duration:.18s;transition-delay:0s;filter:none}
 }
+
+/* Mobile copy has its own rows; the iframe scrolls instead of crushing them. */
+@media(max-width:749px){
+ .site-header{height:auto;min-height:64px;flex-wrap:wrap;padding:12px 16px;gap:8px 16px}
+ .site-header nav{min-width:140px;line-height:1.5}
+ runway-section,runway-section .rw__sticky,runway-section .rw__grid{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible}
+ runway-section .rw__grid{display:flex;flex-direction:column}
+ runway-section .rw__left{flex:none;height:auto;min-height:0;padding-bottom:0}
+ runway-section .rw__head{display:block;padding:20px 20px 12px;min-width:0}
+ runway-section .rw__intro{width:100%;min-width:0}
+ runway-section .rw__title{font-size:26px;line-height:1.2;margin:0 0 10px;letter-spacing:-.025em}
+ runway-section .rw__sub{font-size:13px;line-height:1.6;max-width:none;margin:0;white-space:normal;overflow-wrap:anywhere}
+ runway-section .rw__stage{height:340px;min-height:340px;flex:none}
+ runway-section .rw__actors{display:none}
+ runway-section .rw__hero.is-on .rw__morph{opacity:1!important;visibility:visible!important}
+ runway-section .rw__controls{padding:12px 16px;flex:none}
+ runway-section .rw__panel{margin:0;max-height:none;overflow:visible;border-radius:0;border-top:1px solid #e5e2dc}
+ runway-section .rw__panel-inner{max-height:none;overflow:visible}
+ runway-section .rw__mhead{padding:20px 20px 8px;align-items:flex-start;flex-wrap:wrap;gap:6px}
+ runway-section .rw__mhead-title{white-space:normal;line-height:1.4;overflow:visible;font-size:17px}
+ runway-section .rw__items{display:block;padding:0 20px;overflow:visible}
+ runway-section .rw__item{width:100%;margin:0;padding:16px 0;grid-template-columns:62px minmax(0,1fr) 44px;column-gap:10px;border-right:0!important;border-bottom:1px solid #e5e2dc!important}
+ runway-section .rw__info{gap:6px;min-width:0}
+ runway-section .rw__name{font-size:13px;line-height:1.5;letter-spacing:0;text-transform:none;overflow-wrap:anywhere}
+ runway-section .rw__info .nemu-meta{font-size:11px;line-height:1.5;overflow-wrap:anywhere}
+ runway-section .rw__bundle-note{font-size:12px;line-height:1.6;white-space:normal}
+ runway-section .rw__bundle{padding:18px 20px 28px}
+ runway-section .rw__lb-hint{left:16px;right:16px;max-width:none;letter-spacing:0;text-transform:none;line-height:1.5}
+}
 </style></head><body><header class="site-header"><a aria-label="NEMU Preloved" class="brand" href="./#preloved" target="_top">NEMU<span>PRELOVED / RUNWAY</span></a><nav aria-label="Navigasi"><a href="./#preloved" target="_top">← Kembali ke Preloved</a></nav><button aria-label="Buka tas NEMU" id="open-bag">Tas <span data-cart-count="">0</span></button></header><main><runway-section class="rw rw--add-icon rw--popup rw--list has-dividers has-border" data-after-add="stay" data-autoplay="false" data-blur="true" data-bundle-code="" data-feel="balanced" data-fit="true" data-height-mode="original" data-height-vh="100" data-mblur="false" data-mheight-mode="custom" data-mheight-vh="109" data-msg-choose="Ukuran belum dicantumkan; cek detail penjual." data-msg-error="Couldn’t add to bag. Please try again." data-msg-soldout="Sold out" data-mstyle="classic" data-reflect="false" data-speed="5000" data-style="ring" id="nemu-runway" style="
     --rw-c-stage: #ffffff;
     --rw-c-panel: #ffffff;
