@@ -582,7 +582,7 @@
  runway-section .rw__bundle{padding:18px 20px 28px}
  runway-section .rw__lb-hint{left:16px;right:16px;max-width:none;letter-spacing:0;text-transform:none;line-height:1.5}
 }
-</style></head><body><header class="site-header"><a aria-label="NEMU Preloved" class="brand" href="./#preloved" target="_top">NEMU<span>PRELOVED / RUNWAY</span></a><nav aria-label="Navigasi"><a href="./#preloved" target="_top">← Kembali ke Preloved</a></nav><button aria-label="Buka tas NEMU" id="open-bag">Tas <span data-cart-count="">0</span></button></header><main><runway-section class="rw rw--add-icon rw--popup rw--list has-dividers has-border" data-after-add="stay" data-autoplay="false" data-blur="true" data-bundle-code="" data-feel="balanced" data-fit="true" data-height-mode="original" data-height-vh="100" data-mblur="false" data-mheight-mode="custom" data-mheight-vh="109" data-msg-choose="Ukuran belum dicantumkan; cek detail penjual." data-msg-error="Couldn’t add to bag. Please try again." data-msg-soldout="Sold out" data-mstyle="classic" data-reflect="false" data-speed="5000" data-style="ring" id="nemu-runway" style="
+</style><style>.rw__art .nemu-ai{background:#fff;object-fit:contain!important;border-radius:12px!important}.rw__art .nemu-composition-label{font-size:9px;line-height:1.3;background:#fff;padding:2px 0;z-index:2}</style></head><body><header class="site-header"><a aria-label="NEMU Preloved" class="brand" href="./#preloved" target="_top">NEMU<span>PRELOVED / RUNWAY</span></a><nav aria-label="Navigasi"><a href="./#preloved" target="_top">← Kembali ke Preloved</a></nav><button aria-label="Buka tas NEMU" id="open-bag">Tas <span data-cart-count="">0</span></button></header><main><runway-section class="rw rw--add-icon rw--popup rw--list has-dividers has-border" data-after-add="stay" data-autoplay="false" data-blur="true" data-bundle-code="" data-feel="balanced" data-fit="true" data-height-mode="original" data-height-vh="100" data-mblur="false" data-mheight-mode="custom" data-mheight-vh="109" data-msg-choose="Ukuran belum dicantumkan; cek detail penjual." data-msg-error="Couldn’t add to bag. Please try again." data-msg-soldout="Sold out" data-mstyle="classic" data-reflect="false" data-speed="5000" data-style="ring" id="nemu-runway" style="
     --rw-c-stage: #ffffff;
     --rw-c-panel: #ffffff;
     --rw-c-text: #151413;
@@ -619,7 +619,7 @@
 <div class="rw__grid">
 <div class="rw__left">
 <div class="rw__head">
-<div class="rw__intro"><h2 class="rw__title">Try the Look.</h2><p class="rw__sub">Pilihan produk NEMU untuk dipadukan. Ketuk nomor untuk detail.<br>Foto produk asli, bukan hasil virtual try-on.</p></div>
+<div class="rw__intro"><h2 class="rw__title">Try the Look.</h2><p class="rw__sub">Pilihan produk NEMU untuk dipadukan. Ketuk nomor untuk detail.<br>Model AI untuk produk utama yang tersedia; produk pelengkap ditampilkan terpisah.</p></div>
 <span aria-atomic="true" aria-live="polite" class="rw__sr" data-rw-live=""></span>
 </div>
 <div aria-label="Try the Look. — use arrow keys or swipe to change look" aria-roledescription="carousel" class="rw__stage" data-rw-stage="" role="region" tabindex="0"><div class="rw__actors" data-rw-actors="">
@@ -717,7 +717,7 @@
 <button aria-label="Close" class="rw__lb-close" data-rw-zoom-close="" type="button">
 <svg aria-hidden="true" fill="none" focusable="false" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="1.5" viewbox="0 0 24 24" width="16"><path d="M5 5l14 14M19 5L5 19"></path></svg>
 </button>
-</div><p class="rw__lb-hint">Foto produk, bukan outfit / AI try-on • nomor = produk asli</p></div></div>
+</div><p class="rw__lb-hint">Ilustrasi AI per produk, bukan outfit gabungan atau jaminan ukuran • nomor = produk asli</p></div></div>
 <aside aria-label="In this look" class="rw__panel has-rule">
 <div class="rw__panel-inner">
 <div class="rw__panel-head">
@@ -727,7 +727,7 @@
 </aside>
 </div>
 </div>
-</runway-section></main><dialog id="bag-dialog"><div class="bag-heading"><h2>Tas NEMU</h2><button aria-label="Tutup tas" id="close-bag">×</button></div><p class="bag-note">Tas lokal bersama dengan Preloved. Belum membuat pesanan; stok &amp; detail dikonfirmasi di halaman penjual.</p><div id="bag-items"></div><p id="bag-total"></p></dialog><div aria-live="polite" id="bag-status" role="status"></div><script src="nemu-fashion.js"></script><script>
+</runway-section></main><dialog id="bag-dialog"><div class="bag-heading"><h2>Tas NEMU</h2><button aria-label="Tutup tas" id="close-bag">×</button></div><p class="bag-note">Tas lokal bersama dengan Preloved. Belum membuat pesanan; stok &amp; detail dikonfirmasi di halaman penjual.</p><div id="bag-items"></div><p id="bag-total"></p></dialog><div aria-live="polite" id="bag-status" role="status"></div><script src="nemu-fashion.js?v=ai1"></script><script>
 'use strict';
 window.decodeRunwayImage = image => {const done=()=>image.classList.add('is-decoded'); if(image.complete&&image.naturalWidth)done();else image.addEventListener('load',done,{once:true});image.addEventListener('error',()=>{image.alt='Foto tidak tersedia — buka detail produk';image.classList.add('is-decoded');},{once:true});};
 (async()=>{
@@ -741,8 +741,8 @@ const groups=specs.map(([name,patterns])=>{const used=new Set();return {name,ite
 let initial=groups.findIndex(g=>g.items.some(p=>p.id===api.initialId));
 if(initial<0&&pool.some(p=>p.id===api.initialId)){groups[0].items[0]=pool.find(p=>p.id===api.initialId);groups[0].name='Pilihanmu & temuan lain';initial=0;}
 const root=document.querySelector('runway-section');
-const photo=(p,j)=>`<img class="nemu-photo nemu-photo-${j}" src="${esc(p.preview||p.photo)}" data-source-photo="${esc(p.photo)}" data-product-id="${esc(p.id)}" alt="${esc(p.name)} — foto produk asli" data-model-image decoding="async" draggable="false">`;
-const composition=(g,hero,i)=>g.items.map(photo).join('')+(hero?`<button class="rw__zoom" data-rw-zoom aria-label="Perbesar kurasi ${esc(g.name)}"></button><div class="rw__pins">${g.items.map((p,j)=>`<button class="rw__pin ${j===1?'':'rw__pin--l'}" data-rw-pin="${j+1}" data-product-id="${esc(p.id)}" data-tip="${esc(p.name)}" style="left:${[73,25,76][j]}%;top:${[42,80,82][j]}%;--pi:${j+1}" aria-label="${j+1}: ${esc(p.name)}"><span class="rw__pin-dot" aria-hidden="true">${j+1}</span></button>`).join('')}</div>`:`<button class="rw__hit" data-rw-go="${i}" aria-label="Kurasi ${esc(g.name)}" tabindex="-1"></button>`);
+const photo=(p,j)=>`<img class="nemu-photo nemu-photo-${j} ${j===0&&p.aiModel?'nemu-ai':''}" src="${esc(j===0&&p.aiModel?p.aiModel:(p.preview||p.photo))}" data-source-photo="${esc(p.photo)}" data-product-id="${esc(p.id)}" alt="${esc(p.name)} — ${j===0&&p.aiModel?'ilustrasi model AI':'foto produk asli'}" data-model-image decoding="async" draggable="false">`;
+const composition=(g,hero,i)=>g.items.map(photo).join('')+`<span class="nemu-composition-label">${g.items[0].aiModel?'Model AI · pelengkap terpisah':'Foto katalog · model AI belum tersedia'}</span>`+(hero?`<button class="rw__zoom" data-rw-zoom aria-label="Perbesar kurasi ${esc(g.name)}"></button><div class="rw__pins">${g.items.map((p,j)=>`<button class="rw__pin ${j===1?'':'rw__pin--l'}" data-rw-pin="${j+1}" data-product-id="${esc(p.id)}" data-tip="${esc(p.name)}" style="left:${[73,25,76][j]}%;top:${[42,80,82][j]}%;--pi:${j+1}" aria-label="${j+1}: ${esc(p.name)}"><span class="rw__pin-dot" aria-hidden="true">${j+1}</span></button>`).join('')}</div>`:`<button class="rw__hit" data-rw-go="${i}" aria-label="Kurasi ${esc(g.name)}" tabindex="-1"></button>`);
 const icons='<svg class="rw__i-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 4v16M4 12h16"/></svg><svg class="rw__i-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 12l6 6L20 6"/></svg>';
 groups.forEach((g,i)=>{
  const actor=root.querySelector(`[data-rw-model][data-index="${i}"]`),hero=root.querySelector(`[data-rw-hero][data-index="${i}"]`);
