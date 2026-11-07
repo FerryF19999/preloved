@@ -1,0 +1,4 @@
+/* Keep the principal navigation on one touch-friendly row. */
+@media(max-width:700px),(prefers-reduced-motion:reduce){#preloved-studio *,#preloved-studio *:before,#preloved-studio *:after{animation:none!important;transition:none!important}.pl-orbit,.pl-scan{display:none!important}}
+#preloved-studio[hidden] *{animation-play-state:paused!important}
+@media(max-width:700px){.exp-tabs{gap:6px!important;flex-wrap:nowrap!important;padding:8px 0}.exp-tabs button{flex:1;white-space:nowrap;min-height:44px;padding:7px 2px!important;font-size:11px!important}.exp-tabs small{display:none}#preloved-studio{padding:22px 0 100px}.pl-heading h1{font-size:34px}.pl-heading>p{line-height:1.65}.pl-workspace{padding-top:15px}}

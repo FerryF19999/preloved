@@ -1,0 +1,373 @@
+{
+  "uniqueProducts": 5041,
+  "rawProducts": 5041,
+  "duplicates": 0,
+  "apiTotal": 5041,
+  "pages": [
+    {
+      "page": 1,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=1",
+      "fetchedAt": "2026-11-05T17:26:47.250305+00:00"
+    },
+    {
+      "page": 2,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=2",
+      "fetchedAt": "2026-11-05T17:26:48.832574+00:00"
+    },
+    {
+      "page": 3,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=3",
+      "fetchedAt": "2026-11-05T17:26:47.570776+00:00"
+    },
+    {
+      "page": 4,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=4",
+      "fetchedAt": "2026-11-05T17:26:47.855808+00:00"
+    },
+    {
+      "page": 5,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=5",
+      "fetchedAt": "2026-11-05T17:26:48.806941+00:00"
+    },
+    {
+      "page": 6,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=6",
+      "fetchedAt": "2026-11-05T17:26:49.000966+00:00"
+    },
+    {
+      "page": 7,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=7",
+      "fetchedAt": "2026-11-05T17:26:48.543974+00:00"
+    },
+    {
+      "page": 8,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=8",
+      "fetchedAt": "2026-11-05T17:26:48.856472+00:00"
+    },
+    {
+      "page": 9,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=9",
+      "fetchedAt": "2026-11-05T17:26:49.257702+00:00"
+    },
+    {
+      "page": 10,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=10",
+      "fetchedAt": "2026-11-05T17:26:49.243145+00:00"
+    },
+    {
+      "page": 11,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=11",
+      "fetchedAt": "2026-11-05T17:26:49.651735+00:00"
+    },
+    {
+      "page": 12,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=12",
+      "fetchedAt": "2026-11-05T17:26:49.827162+00:00"
+    },
+    {
+      "page": 13,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=13",
+      "fetchedAt": "2026-11-05T17:26:49.960145+00:00"
+    },
+    {
+      "page": 14,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=14",
+      "fetchedAt": "2026-11-05T17:26:49.802437+00:00"
+    },
+    {
+      "page": 15,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=15",
+      "fetchedAt": "2026-11-05T17:26:50.031360+00:00"
+    },
+    {
+      "page": 16,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=16",
+      "fetchedAt": "2026-11-05T17:26:50.449933+00:00"
+    },
+    {
+      "page": 17,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=17",
+      "fetchedAt": "2026-11-05T17:26:50.623124+00:00"
+    },
+    {
+      "page": 18,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=18",
+      "fetchedAt": "2026-11-05T17:26:50.733999+00:00"
+    },
+    {
+      "page": 19,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=19",
+      "fetchedAt": "2026-11-05T17:26:50.704934+00:00"
+    },
+    {
+      "page": 20,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=20",
+      "fetchedAt": "2026-11-05T17:26:50.887638+00:00"
+    },
+    {
+      "page": 21,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=21",
+      "fetchedAt": "2026-11-05T17:26:51.541170+00:00"
+    },
+    {
+      "page": 22,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=22",
+      "fetchedAt": "2026-11-05T17:26:51.668763+00:00"
+    },
+    {
+      "page": 23,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=23",
+      "fetchedAt": "2026-11-05T17:26:51.662687+00:00"
+    },
+    {
+      "page": 24,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=24",
+      "fetchedAt": "2026-11-05T17:26:51.722230+00:00"
+    },
+    {
+      "page": 25,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=25",
+      "fetchedAt": "2026-11-05T17:26:51.872990+00:00"
+    },
+    {
+      "page": 26,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=26",
+      "fetchedAt": "2026-11-05T17:26:52.756369+00:00"
+    },
+    {
+      "page": 27,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=27",
+      "fetchedAt": "2026-11-05T17:26:52.748645+00:00"
+    },
+    {
+      "page": 28,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=28",
+      "fetchedAt": "2026-11-05T17:26:52.737152+00:00"
+    },
+    {
+      "page": 29,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=29",
+      "fetchedAt": "2026-11-05T17:26:52.605395+00:00"
+    },
+    {
+      "page": 30,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=30",
+      "fetchedAt": "2026-11-05T17:26:53.246473+00:00"
+    },
+    {
+      "page": 31,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=31",
+      "fetchedAt": "2026-11-05T17:26:53.843266+00:00"
+    },
+    {
+      "page": 32,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=32",
+      "fetchedAt": "2026-11-05T17:26:53.834975+00:00"
+    },
+    {
+      "page": 33,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=33",
+      "fetchedAt": "2026-11-05T17:26:53.751606+00:00"
+    },
+    {
+      "page": 34,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=34",
+      "fetchedAt": "2026-11-05T17:26:53.917661+00:00"
+    },
+    {
+      "page": 35,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=35",
+      "fetchedAt": "2026-11-05T17:26:54.415227+00:00"
+    },
+    {
+      "page": 36,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=36",
+      "fetchedAt": "2026-11-05T17:26:55.333961+00:00"
+    },
+    {
+      "page": 37,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=37",
+      "fetchedAt": "2026-11-05T17:26:55.407648+00:00"
+    },
+    {
+      "page": 38,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=38",
+      "fetchedAt": "2026-11-05T17:26:55.145778+00:00"
+    },
+    {
+      "page": 39,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=39",
+      "fetchedAt": "2026-11-05T17:26:55.464235+00:00"
+    },
+    {
+      "page": 40,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=40",
+      "fetchedAt": "2026-11-05T17:26:56.427312+00:00"
+    },
+    {
+      "page": 41,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=41",
+      "fetchedAt": "2026-11-05T17:26:56.722515+00:00"
+    },
+    {
+      "page": 42,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=42",
+      "fetchedAt": "2026-11-05T17:26:56.744642+00:00"
+    },
+    {
+      "page": 43,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=43",
+      "fetchedAt": "2026-11-05T17:26:56.559763+00:00"
+    },
+    {
+      "page": 44,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=44",
+      "fetchedAt": "2026-11-05T17:26:56.790776+00:00"
+    },
+    {
+      "page": 45,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=45",
+      "fetchedAt": "2026-11-05T17:26:57.242796+00:00"
+    },
+    {
+      "page": 46,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=46",
+      "fetchedAt": "2026-11-05T17:26:57.626304+00:00"
+    },
+    {
+      "page": 47,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=47",
+      "fetchedAt": "2026-11-05T17:26:57.647767+00:00"
+    },
+    {
+      "page": 48,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=48",
+      "fetchedAt": "2026-11-05T17:26:57.383385+00:00"
+    },
+    {
+      "page": 49,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=49",
+      "fetchedAt": "2026-11-05T17:26:57.821665+00:00"
+    },
+    {
+      "page": 50,
+      "count": 100,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=50",
+      "fetchedAt": "2026-11-05T17:26:57.967691+00:00"
+    },
+    {
+      "page": 51,
+      "count": 41,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=51",
+      "fetchedAt": "2026-11-05T17:26:58.178747+00:00"
+    },
+    {
+      "page": 52,
+      "count": 0,
+      "total": 5041,
+      "url": "https://api.nemu-ai.com/api/product/search?limit=100&sort=newest&page=52",
+      "fetchedAt": "2026-11-05T17:26:58.174010+00:00"
+    }
+  ],
+  "complete": true
+}
