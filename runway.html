@@ -540,6 +540,7 @@
 @media(max-width:749px){.site-header{height:64px;padding:0 16px;gap:12px}.site-header .brand{font-size:24px}.site-header .brand span{display:none}.site-header nav{display:block;font-size:10px}.site-header #open-bag{font-size:12px}.rw__sub{font-size:10px;line-height:1.4;max-width:330px}.rw__head{padding-top:12px}.rw__info .nemu-meta{font-size:9px}.rw__bundle-note{font-size:9px}}
 /* Mobile keeps the spatial layout without expensive moving blur layers. */
 @media(max-width:749px){
+ runway-section .rw__sub{display:block;font-size:12px;line-height:1.5;letter-spacing:normal;max-width:34ch}
  runway-section .rw__controls{display:flex;gap:6px;padding:4px 12px 12px;opacity:1!important}
  runway-section .rw__controls .rw__icon{width:44px;height:44px;min-width:44px;flex:0 0 44px}
  runway-section .rw__ticks{min-width:0;flex:1;gap:4px}
@@ -586,7 +587,7 @@
 <div class="rw__grid">
 <div class="rw__left">
 <div class="rw__head">
-<div class="rw__intro"><h2 class="rw__title">Try the Look.</h2><p class="rw__sub">Kurasi berdasarkan kategori &amp; nama. Komposisi foto produk asli, bukan foto outfit / AI try-on. Ketuk nomor untuk detail.</p></div>
+<div class="rw__intro"><h2 class="rw__title">Try the Look.</h2><p class="rw__sub">Pilihan produk NEMU untuk dipadukan. Ketuk nomor untuk detail.<br>Foto produk asli, bukan hasil virtual try-on.</p></div>
 <span aria-atomic="true" aria-live="polite" class="rw__sr" data-rw-live=""></span>
 </div>
 <div aria-label="Try the Look. — use arrow keys or swipe to change look" aria-roledescription="carousel" class="rw__stage" data-rw-stage="" role="region" tabindex="0"><div class="rw__actors" data-rw-actors="">
@@ -709,7 +710,7 @@ let initial=groups.findIndex(g=>g.items.some(p=>p.id===api.initialId));
 if(initial<0&&pool.some(p=>p.id===api.initialId)){groups[0].items[0]=pool.find(p=>p.id===api.initialId);groups[0].name='Pilihanmu & temuan lain';initial=0;}
 const root=document.querySelector('runway-section');
 const photo=(p,j)=>`<img class="nemu-photo nemu-photo-${j}" src="${esc(p.preview||p.photo)}" data-source-photo="${esc(p.photo)}" data-product-id="${esc(p.id)}" alt="${esc(p.name)} — foto produk asli" data-model-image decoding="async" draggable="false">`;
-const composition=(g,hero,i)=>g.items.map(photo).join('')+`<span class="nemu-composition-label">Komposisi foto katalog · bukan outfit</span>`+(hero?`<button class="rw__zoom" data-rw-zoom aria-label="Perbesar kurasi ${esc(g.name)}"></button><div class="rw__pins">${g.items.map((p,j)=>`<button class="rw__pin ${j===1?'':'rw__pin--l'}" data-rw-pin="${j+1}" data-product-id="${esc(p.id)}" data-tip="${esc(p.name)}" style="left:${[73,25,76][j]}%;top:${[42,80,82][j]}%;--pi:${j+1}" aria-label="${j+1}: ${esc(p.name)}"><span class="rw__pin-dot" aria-hidden="true">${j+1}</span></button>`).join('')}</div>`:`<button class="rw__hit" data-rw-go="${i}" aria-label="Kurasi ${esc(g.name)}" tabindex="-1"></button>`);
+const composition=(g,hero,i)=>g.items.map(photo).join('')+(hero?`<button class="rw__zoom" data-rw-zoom aria-label="Perbesar kurasi ${esc(g.name)}"></button><div class="rw__pins">${g.items.map((p,j)=>`<button class="rw__pin ${j===1?'':'rw__pin--l'}" data-rw-pin="${j+1}" data-product-id="${esc(p.id)}" data-tip="${esc(p.name)}" style="left:${[73,25,76][j]}%;top:${[42,80,82][j]}%;--pi:${j+1}" aria-label="${j+1}: ${esc(p.name)}"><span class="rw__pin-dot" aria-hidden="true">${j+1}</span></button>`).join('')}</div>`:`<button class="rw__hit" data-rw-go="${i}" aria-label="Kurasi ${esc(g.name)}" tabindex="-1"></button>`);
 const icons='<svg class="rw__i-plus" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 4v16M4 12h16"/></svg><svg class="rw__i-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 12l6 6L20 6"/></svg>';
 groups.forEach((g,i)=>{
  const actor=root.querySelector(`[data-rw-model][data-index="${i}"]`),hero=root.querySelector(`[data-rw-hero][data-index="${i}"]`);

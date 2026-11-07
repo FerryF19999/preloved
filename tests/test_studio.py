@@ -22,6 +22,8 @@ try:
      assert f.evaluate('(id)=>NemuCatalog.bag().includes(id)',selected)
      f.locator('.arrow.next').click();expect(f.locator('#source')).not_to_have_attribute('href',source)
     else:
+     expect(f.locator('.nemu-composition-label')).to_have_count(0)
+     expect(f.locator('.rw__sub')).to_be_visible()
      panel=f.locator('[data-rw-panel]:not([hidden])');before=panel.get_attribute('data-rw-panel')
      if width<700:
       box=f.locator('[data-rw-stage]').bounding_box();x=box['x']+box['width']*.78;y=box['y']+box['height']*.4
